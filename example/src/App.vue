@@ -8,6 +8,7 @@
 
     <el-icon-zoom-in size="10"></el-icon-zoom-in>
     <yyg-svg-icon icon="http://www.yygnb.com/demo/car.svg"></yyg-svg-icon>
+    <yyg-svg-icon class-name="iconaaa" icon="car"></yyg-svg-icon>
   </div>
 </template>
 <script setup lang="ts">
@@ -19,5 +20,10 @@ const msg = ref('hello world')
 <style scoped lang="scss">
 .site {
   padding: 20px;
+
+  .iconaaa {
+    color: cornflowerblue !important;
+    font-size: 200px !important;
+  }
 }
 </style>

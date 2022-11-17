@@ -7,17 +7,27 @@ export default defineComponent({
   name: NAME,
   props: svgIconProps,
   setup (props, context) {
+    // 判断是否是在线图标
     const isOnlineSvg = computed(() => /^(https?:)/.test(props.icon))
+
+    // 计算出样式的 class
+    const innerClassName = computed(() => {
+      const baseName = `${NAME} ${props.className || ''}`
+      return isOnlineSvg.value ? `${baseName} svg-icon-online` : baseName
+    })
 
     // 渲染在线图标
     const renderOnLineSvg = () => (
       <div style={{ '--svg-icon-url': `url(${props.icon})` }}
-           class={`yyg-svg-icon svg-icon-online ${props.className}`}/>
+           class={innerClassName.value}/>
     )
 
     // 渲染本地图标
     const renderLocalSvg = () => (
-      <div>本地图标</div>
+      <svg class={innerClassName.value}
+           aria-hidden={true}>
+        <use xlinkHref={`#icon-${props.icon}`}/>
+      </svg>
     )
 
     return () => (
