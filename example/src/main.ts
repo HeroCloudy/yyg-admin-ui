@@ -7,6 +7,7 @@ import YygAdminUi from '@yyg-admin-ui/yyg-admin-ui'
 
 const env = import.meta.env
 console.log(env)
+console.log('hello')
 
 const app = createApp(App)
 app.use(ElementPlus)
