@@ -13,6 +13,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/mockjs": "^1.0.7",
     "sass": "^1.55.0",
     "vite-plugin-svg-icons": "^2.0.1",
     "vite-plugin-vue-setup-extend": "^0.4.0"
@@ -21,6 +22,7 @@
     "@yyg-admin-ui/yyg-admin-ui": "workspace:^1.0.0",
     "axios": "^1.1.3",
     "element-plus": "^2.2.19",
+    "mockjs": "^1.1.0",
     "vue-router": "^4.0.13"
   }
 }

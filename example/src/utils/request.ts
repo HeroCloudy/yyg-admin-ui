@@ -2,7 +2,7 @@ import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
 
 const defaultConfig = {
   timeout: 5000,
-  baseUrl: ''
+  baseURL: import.meta.env.VITE_BASE_API
 }
 
 class Request {

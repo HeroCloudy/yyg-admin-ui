@@ -1,5 +1,5 @@
 export const urls = {
-  system: {
+  core: {
     login: '/login'
   }
 }

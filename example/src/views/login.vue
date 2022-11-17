@@ -40,7 +40,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import * as systemApi from '@/api/system'
+import * as coreApi from '@/api/core'
 
 const form = ref({
   username: '',
@@ -49,12 +49,13 @@ const form = ref({
 
 // const router = useRouter()
 const onLoginBtnClick = async () => {
-  const resp = await systemApi.login(form.value)
+  const resp = await coreApi.login(form.value)
   console.log(resp)
 }
 </script>
 
 <style scoped lang="scss">
+@use "sass:math";
 @import "../assets/scss/element";
 
 $formWidth: 400px;
@@ -72,7 +73,7 @@ $formWidth: 400px;
   .login-form {
     width: $formWidth;
     position: absolute;
-    right: $formWidth / 2;
+    right: math.div($formWidth, 2);
     top: 50%;
     margin-top: -200px;
     box-sizing: border-box;

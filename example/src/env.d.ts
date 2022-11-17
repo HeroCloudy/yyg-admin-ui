@@ -3,6 +3,7 @@
 interface ImportMetaEnv {
   readonly VITE_BASE_API: string;
   readonly VITE_APP_NAME: string;
+  readonly VITE_IS_MOCK: string;
 }
 
 // eslint-disable-next-line no-unused-vars

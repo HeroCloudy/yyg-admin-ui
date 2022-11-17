@@ -11,6 +11,10 @@ const env = import.meta.env
 console.log(env)
 console.log('hello')
 
+if (env.VITE_IS_MOCK === 'Y') {
+  await import('@/mock')
+}
+
 const app = createApp(App)
 app.use(router)
 app.use(ElementPlus)

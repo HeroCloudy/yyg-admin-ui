@@ -5,5 +5,5 @@ import { urls } from '@/api/urls'
  * 登录
  */
 export const login = (param: { username: string, password: string}) => {
-  return request.post(urls.system.login, { data: param })
+  return request.post(urls.core.login, { data: param })
 }

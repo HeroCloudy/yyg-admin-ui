@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin checkbox($size: 20px, $border-radius: 4px, $font-size: 20px, $color: #384461) {
   :deep(.el-checkbox__inner) { //大小
     width: $size;
@@ -19,8 +21,8 @@
   //}
 
   :deep(.el-checkbox__input.is-checked .el-checkbox__inner::after) { //对钩的位置
-    top: $size / 5;
-    left: $size / 3;
+    top: math.div($size, 5);
+    left: math.div($size, 3);
   }
   :deep(.el-checkbox__input.is-checked + .el-checkbox__label),
   :deep(.el-checkbox__label) { //文字
