@@ -5,6 +5,7 @@ import { EnhanceAppContext } from 'vitepress'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import YygAdminUi from '@yyg-admin-ui/yyg-admin-ui'
+import 'virtual:svg-icons-register'
 
 export default {
   ...DefaultTheme,

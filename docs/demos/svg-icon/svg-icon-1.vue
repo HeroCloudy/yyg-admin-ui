@@ -1,9 +1,3 @@
 <template>
-  <yyg-svg-icon></yyg-svg-icon>
+  <yyg-svg-icon icon="http://www.yygnb.com/demo/car.svg"></yyg-svg-icon>
 </template>
-
-<script lang="ts" setup>
-</script>
-
-<style scoped lang="scss">
-</style>

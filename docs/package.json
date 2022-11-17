@@ -13,12 +13,13 @@
   "author": "程序员优雅哥",
   "license": "ISC",
   "devDependencies": {
+    "vite-plugin-svg-icons": "^2.0.1",
     "vitepress": "1.0.0-alpha.26"
   },
   "dependencies": {
-    "@yyg-admin-ui/yyg-admin-ui": "workspace:^1.0.0",
     "@vitepress-demo-preview/component": "^2.0.2",
     "@vitepress-demo-preview/plugin": "^1.1.5",
+    "@yyg-admin-ui/yyg-admin-ui": "workspace:^1.0.0",
     "element-plus": "^2.2.21"
   }
 }
