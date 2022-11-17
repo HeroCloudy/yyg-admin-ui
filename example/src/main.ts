@@ -11,9 +11,6 @@ import YygAdminUi from '@yyg-admin-ui/yyg-admin-ui'
 import 'virtual:svg-icons-register'
 
 const env = import.meta.env
-console.log(env)
-console.log('hello')
-
 if (env.VITE_IS_MOCK === 'Y') {
   await import('@/mock')
 }

@@ -1,0 +1,29 @@
+@import "../tools";
+@import "../acss/mp";
+@import "../base/var.module";
+
+@include b('yyg-layout') {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  .left {
+    transition: width .5s;
+  }
+}
+
+/* fade-transform */
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+  transition: all 0.3s;
+}
+
+.fade-transform-enter-from {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.fade-transform-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
