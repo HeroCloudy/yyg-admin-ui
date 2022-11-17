@@ -153,6 +153,7 @@ importers:
   packages/yyg-admin-ui:
     specifiers:
       '@element-plus/icons-vue': ^2.0.10
+      '@yyg-admin-ui/app-logo': workspace:^1.0.0
       '@yyg-admin-ui/foo': workspace:^1.0.0
       '@yyg-admin-ui/layout': workspace:^1.0.0
       '@yyg-admin-ui/svg-icon': workspace:^1.0.0
@@ -160,6 +161,7 @@ importers:
       vite-plugin-dts: ^1.6.6
     dependencies:
       '@element-plus/icons-vue': 2.0.10
+      '@yyg-admin-ui/app-logo': link:../app-logo
       '@yyg-admin-ui/foo': link:../foo
       '@yyg-admin-ui/layout': link:../layout
       '@yyg-admin-ui/svg-icon': link:../svg-icon
