@@ -1,0 +1,24 @@
+{
+  "name": "@yyg-admin-ui/docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "serve": "vitepress serve"
+  },
+  "keywords": [],
+  "author": "程序员优雅哥",
+  "license": "ISC",
+  "devDependencies": {
+    "vitepress": "1.0.0-alpha.26"
+  },
+  "dependencies": {
+    "@yyg-admin-ui/yyg-admin-ui": "workspace:^1.0.0",
+    "@vitepress-demo-preview/component": "^2.0.2",
+    "@vitepress-demo-preview/plugin": "^1.1.5",
+    "element-plus": "^2.2.21"
+  }
+}

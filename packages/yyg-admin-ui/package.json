@@ -1,0 +1,19 @@
+{
+  "name": "@yyg-admin-ui/yyg-admin-ui",
+  "version": "1.0.0",
+  "description": "组件库",
+  "main": "index.ts",
+  "scripts": {
+    "build": "rimraf ../../lib && vue-tsc --noEmit && vite build"
+  },
+  "keywords": [],
+  "author": "程序员优雅哥",
+  "license": "ISC",
+  "dependencies": {
+    "@yyg-admin-ui/foo": "workspace:^1.0.0"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "vite-plugin-dts": "^1.6.6"
+  }
+}
