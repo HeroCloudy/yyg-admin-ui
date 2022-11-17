@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@yyg-admin-ui/yyg-admin-ui": "workspace:^1.0.0",
-    "element-plus": "^2.2.19"
+    "element-plus": "^2.2.19",
+    "vue-router": "^4.0.13"
   }
 }

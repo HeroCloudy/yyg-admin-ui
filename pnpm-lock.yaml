@@ -108,9 +108,11 @@ importers:
       sass: ^1.55.0
       vite-plugin-svg-icons: ^2.0.1
       vite-plugin-vue-setup-extend: ^0.4.0
+      vue-router: ^4.0.13
     dependencies:
       '@yyg-admin-ui/yyg-admin-ui': link:../packages/yyg-admin-ui
       element-plus: 2.2.19
+      vue-router: 4.0.13
     devDependencies:
       sass: 1.55.0
       vite-plugin-svg-icons: 2.0.1
@@ -7739,6 +7741,14 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /vue-router/4.0.13:
+    resolution: {integrity: sha512-LmXrC+BkDRLak+d5xTMgUYraT3Nj0H/vCbP+7usGvIl9Viqd1UP6AsP0i69pSbn9O0dXK/xCdp4yPw21HqV9Jw==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@vue/devtools-api': 6.4.5
+    dev: false
 
   /vue-template-compiler/2.7.13:
     resolution: {integrity: sha512-jYM6TClwDS9YqP48gYrtAtaOhRKkbYmbzE+Q51gX5YDr777n7tNI/IZk4QV4l/PjQPNh/FVa/E92sh/RqKMrog==}
