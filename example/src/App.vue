@@ -5,6 +5,8 @@
     <img src="/logo.png" width="200">
     <img src="/qrcode.jpg" width="200">
     <yyg-foo :msg="msg"></yyg-foo>
+
+    <el-icon-zoom-in size="10"></el-icon-zoom-in>
   </div>
 </template>
 <script setup lang="ts">
