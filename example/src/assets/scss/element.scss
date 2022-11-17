@@ -1,0 +1,41 @@
+@mixin checkbox($size: 20px, $border-radius: 4px, $font-size: 20px, $color: #384461) {
+  :deep(.el-checkbox__inner) { //大小
+    width: $size;
+    height: $size;
+    border-color: #384461;
+    border-radius: $border-radius;
+  }
+
+  :deep(.el-checkbox__input.is-checked .el-checkbox__inner) { //选中
+    //border-color: transparent !important;
+    background-color: $color;
+    //&::after {// 里面的对钩
+    //  border-color: #384461;
+    //}
+  }
+
+  //:deep(.el-checkbox__input.is-focus .el-checkbox__inner) { //悬浮
+  //  border-color: transparent !important;
+  //}
+
+  :deep(.el-checkbox__input.is-checked .el-checkbox__inner::after) { //对钩的位置
+    top: $size / 5;
+    left: $size / 3;
+  }
+  :deep(.el-checkbox__input.is-checked + .el-checkbox__label),
+  :deep(.el-checkbox__label) { //文字
+    font-size: $font-size;
+    color: $color;
+  }
+}
+
+@mixin placeholder($color: blue, $font-size: 14px) {
+  :deep(input::-webkit-input-placeholder) { /*WebKit browsers*/
+    color: $color;
+    font-size: $font-size;
+  }
+  :deep(input::-ms-input-placeholder) { /*Internet Explorer*/
+    color: $color;
+    font-size: $font-size;
+  }
+}
