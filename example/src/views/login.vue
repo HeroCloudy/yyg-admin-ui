@@ -40,16 +40,17 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import * as systemApi from '@/api/system'
 
 const form = ref({
   username: '',
   password: ''
 })
 
-const router = useRouter()
-const onLoginBtnClick = () => {
-  router.push('/')
+// const router = useRouter()
+const onLoginBtnClick = async () => {
+  const resp = await systemApi.login(form.value)
+  console.log(resp)
 }
 </script>
 
