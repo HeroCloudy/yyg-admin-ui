@@ -40,17 +40,20 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import * as coreApi from '@/api/core'
+import useCoreStore from '@/store/modules/core'
+import { useRouter } from 'vue-router'
 
 const form = ref({
   username: '',
   password: ''
 })
 
-// const router = useRouter()
+const router = useRouter()
+const coreStore = useCoreStore()
+
 const onLoginBtnClick = async () => {
-  const resp = await coreApi.login(form.value)
-  console.log(resp)
+  await coreStore.login(form.value)
+  await router.push('/')
 }
 </script>
 

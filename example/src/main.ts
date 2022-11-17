@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 import router from './router'
+import pinia from '@/store'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import YygAdminUi from '@yyg-admin-ui/yyg-admin-ui'
@@ -16,7 +17,8 @@ if (env.VITE_IS_MOCK === 'Y') {
 }
 
 const app = createApp(App)
-app.use(router)
-app.use(ElementPlus)
-app.use(YygAdminUi)
+  .use(router)
+  .use(pinia)
+  .use(ElementPlus)
+  .use(YygAdminUi)
 app.mount('#app')

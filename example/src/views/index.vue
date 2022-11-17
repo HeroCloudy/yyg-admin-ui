@@ -8,11 +8,19 @@
  -->
 <template>
   <div>
-    index
+    <h1>token: {{token}}</h1>
   </div>
 </template>
 
 <script lang="ts" setup>
+import useCoreStore from '@/store/modules/core'
+import { storeToRefs } from 'pinia'
+
+const coreStore = useCoreStore()
+
+const { token } = storeToRefs(coreStore)
+// const token = 'aaa'
+
 </script>
 
 <style scoped lang="scss">
