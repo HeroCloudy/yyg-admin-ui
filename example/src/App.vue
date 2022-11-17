@@ -7,6 +7,7 @@
     <yyg-foo :msg="msg"></yyg-foo>
 
     <el-icon-zoom-in size="10"></el-icon-zoom-in>
+    <yyg-svg-icon icon="http://www.yygnb.com/demo/car.svg"></yyg-svg-icon>
   </div>
 </template>
 <script setup lang="ts">

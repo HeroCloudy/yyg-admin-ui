@@ -1,0 +1,19 @@
+@import "../tools";
+@import "../acss/mp";
+@import "../base/var.module";
+
+.yyg-svg-icon {
+  width: 1.5em;
+  height: 1.5em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.svg-icon-online {
+  background-color: currentColor;
+  mask-image: var(--svg-icon-url);
+  -webkit-mask-image: var(--svg-icon-url);
+  mask-size: cover;
+  -webkit-mask-size: cover;
+  display: inline-block;
+}

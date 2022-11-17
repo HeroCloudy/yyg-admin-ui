@@ -1,11 +1,13 @@
 import { App } from 'vue'
 import Foo from '@yyg-admin-ui/foo'
+import SvgIcon from '@yyg-admin-ui/svg-icon'
 // import component end
 import '../scss/index.scss'
 import { installIcons } from './src/install-icons'
 
 const components = [
-  Foo
+  Foo,
+  SvgIcon
 ] // components
 
 // 全局动态添加组件
