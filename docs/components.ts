@@ -2,5 +2,6 @@ export const components = [
   { text: 'Foo 组件示例', link: '/components/foo' },
   { text: 'SvgIcon SVG图标', link: '/components/svg-icon' },
   { text: 'Layout 布局', link: '/components/layout' },
-  { text: 'AppLogo 应用logo', link: '/components/app-logo' }
+  { text: 'AppLogo 应用logo', link: '/components/app-logo' },
+  { text: 'ToggleFullScreen 全屏', link: '/components/toggle-full-screen' }
 ] // end

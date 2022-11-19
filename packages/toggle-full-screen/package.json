@@ -1,0 +1,16 @@
+{
+  "name": "@yyg-admin-ui/toggle-full-screen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@yyg-admin-ui/utils": "workspace:^1.0.0",
+    "screenfull": "^6.0.2"
+  }
+}
