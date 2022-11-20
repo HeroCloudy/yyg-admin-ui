@@ -7,7 +7,13 @@
  * 2022/11/17 13:46   dscloudy    Create File.
  -->
 <template>
-  <yyg-layout type="tlr" left-width="280px"></yyg-layout>
+  <yyg-layout type="tlr" left-width="280px">
+    <template #top>
+      <div>
+        <yyg-toggle-full-screen></yyg-toggle-full-screen>
+      </div>
+    </template>
+  </yyg-layout>
 </template>
 
 <script lang="ts" setup>
