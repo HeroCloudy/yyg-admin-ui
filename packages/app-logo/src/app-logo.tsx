@@ -25,14 +25,14 @@ export default defineComponent({
     }
 
     const renderName = () => {
-      if (innerIsExpand.value) {
-        return (
-          <div class={`${NAME}--name`}>
+      return (
+          <div class={`${NAME}--name`} style={{
+            width: innerIsExpand.value ? 'auto' : '0',
+            visibility: innerIsExpand.value ? 'visible' : 'hidden'
+          }}>
             {props.appName}
           </div>
-        )
-      }
-      return null
+      )
     }
     return () => (
       <div class={NAME}>
