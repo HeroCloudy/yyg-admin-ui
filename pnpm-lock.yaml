@@ -132,7 +132,19 @@ importers:
       vite-plugin-svg-icons: 2.0.1
       vite-plugin-vue-setup-extend: 0.4.0
 
+  packages/app-logo:
+    specifiers:
+      '@yyg-admin-ui/utils': workspace:^1.0.0
+    dependencies:
+      '@yyg-admin-ui/utils': link:../utils
+
   packages/foo:
+    specifiers:
+      '@yyg-admin-ui/utils': workspace:^1.0.0
+    dependencies:
+      '@yyg-admin-ui/utils': link:../utils
+
+  packages/layout:
     specifiers:
       '@yyg-admin-ui/utils': workspace:^1.0.0
     dependencies:
