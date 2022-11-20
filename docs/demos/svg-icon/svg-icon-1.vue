@@ -1,3 +1,3 @@
 <template>
-  <yyg-svg-icon icon="http://www.yygnb.com/demo/car.svg"></yyg-svg-icon>
+  <yyg-svg-icon icon="https://herocloudy.github.io/yyg-admin-ui/logo.png"></yyg-svg-icon>
 </template>

@@ -10,7 +10,7 @@
     </div>
     <div>
       <h4>在线图标设置className</h4>
-      <yyg-svg-icon class-name="demo-icon" icon="http://www.yygnb.com/demo/car.svg" />
+      <yyg-svg-icon class-name="demo-icon" icon="https://herocloudy.github.io/yyg-admin-ui/logo.png" />
     </div>
   </div>
 </template>

@@ -1,14 +1,14 @@
 ---
 layout: home
 
-title: 选项卡标题
-titleTemplate: 选项卡描述
+title: YYG Admin UI
+titleTemplate: 基于Vite Vue3企业级组件库
 editLink: true
 lastUpdated: true
 hero:
   name: yyg-admin-ui
-  text: YYG Vue3 企业级组件库
-  tagline: 组件库描述 / SLOGAN
+  text: Vue3 企业级组件库
+  tagline: 基于 Vite3 Vue3 二次封装 Element Plus 中后台组件
   image:
     src: /logo.png
     alt: yyg-admin-ui
@@ -21,12 +21,12 @@ hero:
       link: /components/foo
 features:
   - icon: 🔨
-    title: 功能/特点 1
-    details: 功能/特点 1 具体描述信息。
+    title: Vue3 + TypeScript
+    details: 基于 Vue3 和 TypeScript，强类型约束，规范输入输出类型
   - icon: 🧩
-    title: 功能/特点 2
-    details: 功能/特点 2 具体描述信息。
+    title: JSON Schema
+    details: 通过 JSON Schema 配置展示表单和列表，避免各种复杂标签嵌套。
   - icon: ✈️
-    title: 功能/特点 3。
-    details: 功能/特点 3 具体描述信息。
+    title: 开箱即用
+    details: 提供丰富的高级组件，开箱即用，让开发人员专注于业务开发。
 ---

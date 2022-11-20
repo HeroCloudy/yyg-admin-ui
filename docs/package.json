@@ -6,13 +6,14 @@
   "type": "module",
   "scripts": {
     "dev": "vitepress dev",
-    "build": "vitepress build",
+    "build": "vitepress build --build",
     "serve": "vitepress serve"
   },
   "keywords": [],
   "author": "程序员优雅哥",
   "license": "ISC",
   "devDependencies": {
+    "minimist": "^1.2.7",
     "vite-plugin-svg-icons": "^2.0.1",
     "vitepress": "1.0.0-alpha.26"
   },

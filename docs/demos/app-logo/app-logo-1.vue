@@ -5,7 +5,7 @@
   </el-radio-group>
 
   <yyg-app-logo app-name="YYG Admin Pro"
-                logo="/logo.png"
+                logo="https://herocloudy.github.io/yyg-admin-ui/logo.png"
                 :is-expand="isExpand"
                 :style="{marginTop: '20px', width: isExpand ? '250px' : '60px'}"/>
 </template>
