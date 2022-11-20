@@ -1,7 +1,7 @@
 import { defineComponent, onMounted, onUnmounted, ref } from 'vue'
 import { toggleFullScreenProps } from './types'
 import screenfull from 'screenfull'
-import './assets/iconfont'
+// import './assets/iconfont'
 
 const NAME = 'yyg-toggle-full-screen'
 
@@ -16,9 +16,11 @@ export default defineComponent({
     }
 
     onMounted(() => {
-      if (screenfull.isEnabled) {
-        screenfull.on('change', setIsFullScreen)
-      }
+      import('./assets/iconfont' as any).then(_ => {
+        if (screenfull.isEnabled) {
+          screenfull.on('change', setIsFullScreen)
+        }
+      })
     })
 
     onUnmounted(() => {
