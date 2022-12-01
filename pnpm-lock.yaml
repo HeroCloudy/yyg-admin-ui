@@ -191,6 +191,7 @@ importers:
       '@yyg-admin-ui/svg-icon': workspace:^1.0.0
       '@yyg-admin-ui/toggle-full-screen': workspace:^1.0.0
       '@yyg-admin-ui/toggle-side-bar': workspace:^1.0.0
+      '@yyg-admin-ui/user-dropdown': workspace:^1.0.0
       rimraf: ^3.0.2
       vite-plugin-dts: ^1.7.1
     dependencies:
@@ -201,6 +202,7 @@ importers:
       '@yyg-admin-ui/svg-icon': link:../svg-icon
       '@yyg-admin-ui/toggle-full-screen': link:../toggle-full-screen
       '@yyg-admin-ui/toggle-side-bar': link:../toggle-side-bar
+      '@yyg-admin-ui/user-dropdown': link:../user-dropdown
     devDependencies:
       rimraf: 3.0.2
       vite-plugin-dts: 1.7.1

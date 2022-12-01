@@ -12,6 +12,7 @@
       <div>
         <yyg-toggle-full-screen></yyg-toggle-full-screen>
         <yyg-toggle-side-bar></yyg-toggle-side-bar>
+        <yyg-user-dropdown></yyg-user-dropdown>
       </div>
     </template>
   </yyg-layout>
