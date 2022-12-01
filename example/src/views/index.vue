@@ -11,6 +11,7 @@
     <template #top>
       <div>
         <yyg-toggle-full-screen></yyg-toggle-full-screen>
+        <yyg-toggle-side-bar></yyg-toggle-side-bar>
       </div>
     </template>
   </yyg-layout>

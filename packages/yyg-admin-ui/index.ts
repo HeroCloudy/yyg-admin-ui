@@ -4,6 +4,7 @@ import SvgIcon from '@yyg-admin-ui/svg-icon'
 import Layout from '@yyg-admin-ui/layout'
 import AppLogo from '@yyg-admin-ui/app-logo'
 import ToggleFullScreen from '@yyg-admin-ui/toggle-full-screen'
+import ToggleSideBar from '@yyg-admin-ui/toggle-side-bar'
 // import component end
 import '../scss/index.scss'
 import { installIcons } from './src/install-icons'
@@ -13,7 +14,8 @@ const components = [
   SvgIcon,
   Layout,
   AppLogo,
-  ToggleFullScreen
+  ToggleFullScreen,
+  ToggleSideBar
 ] // components
 
 // 全局动态添加组件

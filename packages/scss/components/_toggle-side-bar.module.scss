@@ -1,0 +1,30 @@
+@import "../tools";
+@import "../acss/mp";
+@import "../base/var.module";
+
+@include b('yyg-toggle-side-bar') {
+  cursor: pointer;
+  padding: 5px;
+  display: inline-block;
+  transition: all 0.5s;
+  font-size: 22px;
+
+  &:hover {
+    background-color: $icon-btn-hover-color;
+    color: white;
+  }
+
+  @include m('is-collapse') {
+    cursor: pointer;
+    transform:rotate(90deg);
+    display: inline-block;
+    transition: all 0.5s;
+    font-size: 22px;
+    padding: 5px;
+
+    &:hover {
+      background-color: $icon-btn-hover-color;
+      color: white;
+    }
+  }
+}

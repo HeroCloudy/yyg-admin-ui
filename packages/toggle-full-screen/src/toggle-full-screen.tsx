@@ -38,7 +38,11 @@ export default defineComponent({
     }
     return () => (
       <div class={NAME} onClick={onBtnClick}>
-        <yyg-svg-icon icon={isFullScreen.value ? 'cancel-full-screen' : 'enter-full-screen'}></yyg-svg-icon>
+        <el-tooltip effect="light" content={ isFullScreen.value ? '退出全屏' : '进入全屏' }>
+          <div>
+            <yyg-svg-icon icon={isFullScreen.value ? 'cancel-full-screen' : 'enter-full-screen'}></yyg-svg-icon>
+          </div>
+        </el-tooltip>
       </div>
     )
   }
