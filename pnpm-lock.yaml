@@ -144,6 +144,12 @@ importers:
     dependencies:
       '@yyg-admin-ui/utils': link:../utils
 
+  packages/card:
+    specifiers:
+      '@yyg-admin-ui/utils': workspace:^1.0.0
+    dependencies:
+      '@yyg-admin-ui/utils': link:../utils
+
   packages/foo:
     specifiers:
       '@yyg-admin-ui/utils': workspace:^1.0.0
@@ -176,6 +182,12 @@ importers:
     dependencies:
       '@yyg-admin-ui/utils': link:../utils
 
+  packages/user-dropdown:
+    specifiers:
+      '@yyg-admin-ui/utils': workspace:^1.0.0
+    dependencies:
+      '@yyg-admin-ui/utils': link:../utils
+
   packages/utils:
     specifiers:
       mitt: 1.1.3
@@ -186,6 +198,7 @@ importers:
     specifiers:
       '@element-plus/icons-vue': ^2.0.10
       '@yyg-admin-ui/app-logo': workspace:^1.0.0
+      '@yyg-admin-ui/card': workspace:^1.0.0
       '@yyg-admin-ui/foo': workspace:^1.0.0
       '@yyg-admin-ui/layout': workspace:^1.0.0
       '@yyg-admin-ui/svg-icon': workspace:^1.0.0
@@ -197,6 +210,7 @@ importers:
     dependencies:
       '@element-plus/icons-vue': 2.0.10
       '@yyg-admin-ui/app-logo': link:../app-logo
+      '@yyg-admin-ui/card': link:../card
       '@yyg-admin-ui/foo': link:../foo
       '@yyg-admin-ui/layout': link:../layout
       '@yyg-admin-ui/svg-icon': link:../svg-icon

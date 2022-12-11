@@ -5,5 +5,6 @@ export const components = [
   { text: 'AppLogo 应用logo', link: '/components/app-logo' },
   { text: 'ToggleFullScreen 全屏', link: '/components/toggle-full-screen' },
   { text: 'ToggleSideBar 切换左边栏', link: '/components/toggle-side-bar' },
-  { text: 'UserDropdown 头像下拉', link: '/components/user-dropdown' }
+  { text: 'UserDropdown 头像下拉', link: '/components/user-dropdown' },
+  { text: 'Card 高级卡片', link: '/components/card' }
 ] // end

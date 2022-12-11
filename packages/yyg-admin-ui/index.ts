@@ -6,6 +6,7 @@ import AppLogo from '@yyg-admin-ui/app-logo'
 import ToggleFullScreen from '@yyg-admin-ui/toggle-full-screen'
 import ToggleSideBar from '@yyg-admin-ui/toggle-side-bar'
 import UserDropdown from '@yyg-admin-ui/user-dropdown'
+import Card from '@yyg-admin-ui/card'
 // import component end
 import '../scss/index.scss'
 import { installIcons } from './src/install-icons'
@@ -17,7 +18,8 @@ const components = [
   AppLogo,
   ToggleFullScreen,
   ToggleSideBar,
-  UserDropdown
+  UserDropdown,
+  Card
 ] // components
 
 // 全局动态添加组件
