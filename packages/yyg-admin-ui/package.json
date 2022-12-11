@@ -14,11 +14,13 @@
     "@yyg-admin-ui/app-logo": "workspace:^1.0.0",
     "@yyg-admin-ui/card": "workspace:^1.0.0",
     "@yyg-admin-ui/foo": "workspace:^1.0.0",
+    "@yyg-admin-ui/form": "workspace:^1.0.0",
     "@yyg-admin-ui/layout": "workspace:^1.0.0",
     "@yyg-admin-ui/svg-icon": "workspace:^1.0.0",
     "@yyg-admin-ui/toggle-full-screen": "workspace:^1.0.0",
     "@yyg-admin-ui/toggle-side-bar": "workspace:^1.0.0",
-    "@yyg-admin-ui/user-dropdown": "workspace:^1.0.0"
+    "@yyg-admin-ui/user-dropdown": "workspace:^1.0.0",
+    "@yyg-admin-ui/utils": "workspace:^1.0.0"
   },
   "devDependencies": {
     "rimraf": "^3.0.2",
