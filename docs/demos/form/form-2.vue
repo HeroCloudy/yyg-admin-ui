@@ -1,9 +1,13 @@
 <template>
   <yyg-form :schema="formSchema"
             :model="formModel"
+            label-position="top"
             :ui-schema="formUiSchema">
     <template #anyOf="data">
-      <div>This is anyOf: {{data.anyOf}}</div>
+      <div>This is anyOf: {{data.anyOf.join(',')}}</div>
+    </template>
+    <template #htmlContent="data">
+      <el-button link type="primary">{{data.htmlContent}}</el-button>
     </template>
   </yyg-form>
 </template>

@@ -9,13 +9,17 @@ export default defineComponent({
   name: NAME,
   props: formProps,
   setup (props, context) {
+    // 表单元素的引用
     const formRef = ref()
+    // 表单的值
     let form = reactive<any>(props.model)
 
+    // 重置表单
     const reset = () => {
       formRef.value && formRef.value.resetFields()
     }
 
+    // 对外暴露的方法
     context.expose({
       reset
     })
@@ -36,7 +40,7 @@ export default defineComponent({
     }
 
     const renderForm = () => {
-      const properties = props.schema.properties
+      const { properties } = props.schema
       const formItems: VNode[] = []
       Object.keys(properties).forEach((prop: string) => {
         const item = properties[prop]

@@ -11,6 +11,105 @@ import {
 } from '@yyg-admin-ui/utils'
 import { Slots, VNode } from 'vue'
 
+const renderFormItemString = (
+  prop: string,
+  form: Record<string, any>,
+  item: PropItem,
+  uiItem: UiSchemaItem = {},
+  commonProps: { [key: string]: string | number | boolean | undefined } | {},
+  onChange: (key: string, value: any) => void,
+  onKeyup: (e: KeyboardEvent) => void
+) => {
+  const { oneOf, format } = item
+  if (!oneOf && !format) {
+    const uiWidget = uiItem[UI_WIDGET] || 'input'
+    if (uiWidget === UiWidgets.INPUT) {
+      return (
+        <el-input
+          v-model={form[prop]}
+          onInput={(value: any) => onChange(prop, value)}
+          onKeyup={onKeyup}
+          {...commonProps}
+        />
+      )
+    }
+    if (uiWidget === UiWidgets.TEXTAREA) {
+      return (
+        <el-input
+          v-model={form[prop]}
+          rows={2}
+          type="textarea"
+          onInput={(value: any) => onChange(prop, value)}
+          {...commonProps}
+        />
+      )
+    }
+    throw Error('仅支持 input 和 textarea')
+  }
+  if (format === 'date') {
+    return (
+      <el-date-picker
+        v-model={form[prop]}
+        type="date"
+        onChange={(value: any) => onChange(prop, value)}
+        {...commonProps}
+      />
+    )
+  }
+  if (format === 'time') {
+    // return (
+    //   <el-time-picker
+    //     v-model={form[prop]}
+    //     {...commonProps}
+    //   />
+    // )
+  }
+  if (oneOf && oneOf.length > 0) {
+    const uiWidget = uiItem[UI_WIDGET] || 'select'
+    if (uiWidget === UiWidgets.SELECT) {
+      return (
+        <el-select
+          v-model={form[prop]}
+          onChange={(value: any) => onChange(prop, value)}
+          {...commonProps}>
+          {
+            oneOf.map(one => (
+              <el-option label={one.title} value={one.const}/>
+            ))
+          }
+        </el-select>
+      )
+    } else if (uiWidget === UiWidgets.RADIO) {
+      return (
+        <el-radio-group
+          v-model={form[prop]}
+          onChange={(value: any) => onChange(prop, value)}
+          {...commonProps}>
+          {
+            oneOf.map(one => (
+              <el-radio label={one.const}>{one.title}</el-radio>
+            ))
+          }
+        </el-radio-group>
+      )
+    } else {
+      throw Error('oneOf 只能使用 radio 或 select')
+    }
+  }
+}
+
+/**
+ * 渲染表单项
+ *
+ * @param form 表单的模型
+ * @param prop 表单项的属性
+ * @param item 表单项的配置
+ * @param uiItem 表单项的 UISchema
+ * @param defaultSpan 默认占据的span
+ * @param onChange data-change 事件
+ * @param slots 插槽
+ * @param onEnterUp 回车键事件
+ */
 export const renderFormItem = (
   form: Record<string, any>,
   prop: string,
@@ -24,7 +123,7 @@ export const renderFormItem = (
   if (uiItem[UI_HIDDEN]) {
     return null
   }
-  const { type, oneOf, anyOf, format } = item
+  const { type, anyOf, format } = item
   const commonProps = uiItem[UI_OPTIONS] || {}
   commonProps.disabled = (uiItem[UI_DISABLED] === true)
   // 添加默认的placeholder
@@ -43,82 +142,7 @@ export const renderFormItem = (
     }
     switch (type) {
       case PropItemTypes.STRING: {
-        if (!oneOf && !format) {
-          const uiWidget = uiItem[UI_WIDGET] || 'input'
-          if (uiWidget === UiWidgets.INPUT) {
-            return (
-              <el-input
-                v-model={form[prop]}
-                onInput={(value: any) => onChange(prop, value)}
-                onKeyup={onKeyup}
-                {...commonProps}
-              />
-            )
-          } else if (uiWidget === UiWidgets.TEXTAREA) {
-            return (
-              <el-input
-                v-model={form[prop]}
-                rows={2}
-                type="textarea"
-                onInput={(value: any) => onChange(prop, value)}
-                {...commonProps}
-              />
-            )
-          } else {
-            throw Error('仅支持 input 和 textarea')
-          }
-        }
-        if (format === 'date') {
-          return (
-            <el-date-picker
-              v-model={form[prop]}
-              type="date"
-              onChange={(value: any) => onChange(prop, value)}
-              {...commonProps}
-            />
-          )
-        }
-        // if (format === 'time') {
-        //   return (
-        //     <el-time-picker
-        //       v-model={form[prop]}
-        //       {...commonProps}
-        //     />
-        //   )
-        // }
-        if (oneOf && oneOf.length > 0) {
-          const uiWidget = uiItem[UI_WIDGET] || 'select'
-          if (uiWidget === UiWidgets.SELECT) {
-            return (
-              <el-select
-                v-model={form[prop]}
-                onChange={(value: any) => onChange(prop, value)}
-                {...commonProps}>
-                {
-                  oneOf.map(one => (
-                    <el-option label={one.title} value={one.const}/>
-                  ))
-                }
-              </el-select>
-            )
-          } else if (uiWidget === UiWidgets.RADIO) {
-            return (
-              <el-radio-group
-                v-model={form[prop]}
-                onChange={(value: any) => onChange(prop, value)}
-                {...commonProps}>
-                {
-                  oneOf.map(one => (
-                    <el-radio label={one.const}>{one.title}</el-radio>
-                  ))
-                }
-              </el-radio-group>
-            )
-          } else {
-            throw Error('oneOf 只能使用 radio 或 select')
-          }
-        }
-        break
+        return renderFormItemString(prop, form, item, uiItem, commonProps, onChange, onKeyup)
       }
       case PropItemTypes.NUMBER: {
         return (
