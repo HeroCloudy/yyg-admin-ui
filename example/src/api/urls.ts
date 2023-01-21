@@ -1,5 +1,6 @@
 export const urls = {
   core: {
-    login: '/login'
+    login: '/login',
+    profile: '/user/profile'
   }
 }

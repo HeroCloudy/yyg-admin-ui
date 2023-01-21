@@ -12,13 +12,33 @@
       <div>
         <yyg-toggle-full-screen></yyg-toggle-full-screen>
         <yyg-toggle-side-bar></yyg-toggle-side-bar>
-        <yyg-user-dropdown></yyg-user-dropdown>
+        <yyg-user-dropdown :avatar="userInfo.avatar" :dropdown-items="dropdownItems"></yyg-user-dropdown>
       </div>
     </template>
   </yyg-layout>
 </template>
 
 <script lang="ts" setup>
+import useCoreStore from '@/store/modules/core'
+import { storeToRefs } from 'pinia'
+import { UserDropDownList } from '../../../packages/user-dropdown/src/types'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+const coreStore = useCoreStore()
+const { userInfo } = storeToRefs(coreStore)
+
+const onExit = async () => {
+  await coreStore.exit()
+  await router.push('/login')
+}
+
+const dropdownItems: UserDropDownList = [
+  { title: '修改资料', click: () => { } },
+  { title: '个人中心', click: () => { } },
+  { title: '退出登录', click: onExit, isDivided: true }
+]
+
 </script>
 
 <style scoped lang="scss">
