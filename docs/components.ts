@@ -10,5 +10,6 @@ export const components = [
   { text: 'Form JSON Schema表单', link: '/components/form' },
   { text: 'SideBar 左侧边栏', link: '/components/side-bar' },
   { text: 'Page 页面', link: '/components/page' },
-  { text: 'Description 描述', link: '/components/description' }
+  { text: 'Description 描述', link: '/components/description' },
+  { text: 'ProForm 高级表单', link: '/components/pro-form' }
 ] // end

@@ -216,6 +216,7 @@ importers:
       '@yyg-admin-ui/form': workspace:^1.0.0
       '@yyg-admin-ui/layout': workspace:^1.0.0
       '@yyg-admin-ui/page': workspace:^1.0.0
+      '@yyg-admin-ui/pro-form': workspace:^1.0.0
       '@yyg-admin-ui/side-bar': workspace:^1.0.0
       '@yyg-admin-ui/svg-icon': workspace:^1.0.0
       '@yyg-admin-ui/toggle-full-screen': workspace:^1.0.0
@@ -233,6 +234,7 @@ importers:
       '@yyg-admin-ui/form': link:../form
       '@yyg-admin-ui/layout': link:../layout
       '@yyg-admin-ui/page': link:../page
+      '@yyg-admin-ui/pro-form': link:../pro-form
       '@yyg-admin-ui/side-bar': link:../side-bar
       '@yyg-admin-ui/svg-icon': link:../svg-icon
       '@yyg-admin-ui/toggle-full-screen': link:../toggle-full-screen

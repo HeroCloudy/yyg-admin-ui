@@ -50,6 +50,8 @@ export default defineComponent({
     }
 
     const renderForm = () => {
+      formRef.value && formRef.value.clearValidate()
+
       const { properties } = props.schema
       const formItems: VNode[] = []
       Object.keys(properties).forEach((prop: string) => {
