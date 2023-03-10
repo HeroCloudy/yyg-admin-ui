@@ -76,6 +76,9 @@ export const programFormUiSchema: UiSchema = {
   inputTime: {
     'ui:hidden': true
   },
+  attachment: {
+    'ui:column': 3
+  },
   remark: {
     'ui:widget': 'textarea',
     'ui:options': {

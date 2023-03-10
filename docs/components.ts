@@ -9,5 +9,6 @@ export const components = [
   { text: 'Card 高级卡片', link: '/components/card' },
   { text: 'Form JSON Schema表单', link: '/components/form' },
   { text: 'SideBar 左侧边栏', link: '/components/side-bar' },
-  { text: 'Page 页面', link: '/components/page' }
+  { text: 'Page 页面', link: '/components/page' },
+  { text: 'Description 描述', link: '/components/description' }
 ] // end

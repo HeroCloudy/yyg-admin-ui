@@ -9,13 +9,12 @@
  -->
 <template>
   <yyg-page>
-    <yyg-form style="margin: 20px;"
-              ref="formRef"
+    <yyg-form ref="formRef"
               :schema="programSchema"
               :ui-schema="innerUiSchema"
               :model="programInfo"
               @data-change="onDataChange"
-              :column="4"
+              :column="3"
               label-suffix="："
               @enter-up="onEnterUp">
       <template #attachment>
@@ -57,7 +56,6 @@ const formRef = ref()
 
 const onValidate = () => {
   if (formRef.value) {
-    console.log(111)
     formRef.value.validate((valid: boolean, fields: any) => {
       if (valid) {
         console.log('submit!')

@@ -10,6 +10,7 @@ import Card from '@yyg-admin-ui/card'
 import Form from '@yyg-admin-ui/form'
 import SideBar from '@yyg-admin-ui/side-bar'
 import Page from '@yyg-admin-ui/page'
+import Description from '@yyg-admin-ui/description'
 // import component end
 import '../scss/index.scss'
 import { installIcons } from './src/install-icons'
@@ -27,7 +28,8 @@ const components = [
   Card,
   Form,
   SideBar,
-  Page
+  Page,
+  Description
 ] // components
 
 // 全局动态添加组件

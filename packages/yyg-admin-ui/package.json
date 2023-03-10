@@ -13,6 +13,7 @@
     "@element-plus/icons-vue": "^2.0.10",
     "@yyg-admin-ui/app-logo": "workspace:^1.0.0",
     "@yyg-admin-ui/card": "workspace:^1.0.0",
+    "@yyg-admin-ui/description": "workspace:^1.0.0",
     "@yyg-admin-ui/foo": "workspace:^1.0.0",
     "@yyg-admin-ui/form": "workspace:^1.0.0",
     "@yyg-admin-ui/layout": "workspace:^1.0.0",
