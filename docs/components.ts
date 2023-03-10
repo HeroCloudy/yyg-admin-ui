@@ -11,5 +11,6 @@ export const components = [
   { text: 'SideBar 左侧边栏', link: '/components/side-bar' },
   { text: 'Page 页面', link: '/components/page' },
   { text: 'Description 描述', link: '/components/description' },
-  { text: 'ProForm 高级表单', link: '/components/pro-form' }
+  { text: 'ProForm 高级表单', link: '/components/pro-form' },
+  { text: 'ProDescription 高级描述', link: '/components/pro-description' }
 ] // end

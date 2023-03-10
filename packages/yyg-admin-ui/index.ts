@@ -12,6 +12,7 @@ import SideBar from '@yyg-admin-ui/side-bar'
 import Page from '@yyg-admin-ui/page'
 import Description from '@yyg-admin-ui/description'
 import ProForm from '@yyg-admin-ui/pro-form'
+import ProDescription from '@yyg-admin-ui/pro-description'
 // import component end
 import '../scss/index.scss'
 import { installIcons } from './src/install-icons'
@@ -31,7 +32,8 @@ const components = [
   SideBar,
   Page,
   Description,
-  ProForm
+  ProForm,
+  ProDescription
 ] // components
 
 // 全局动态添加组件

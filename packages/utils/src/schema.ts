@@ -41,3 +41,27 @@ export const getSchemaDefaultModel = (schema: Schema): Record<string, any> => {
   })
   return value
 }
+
+export const buildSchema = (schema: Schema, fields?: string[]): Schema => {
+  if (fields === undefined || fields === null) {
+    return schema
+  }
+
+  if (fields.length === 0) {
+    return {
+      ...schema,
+      properties: {}
+    }
+  }
+
+  const properties: Record<string, SchemaProp> = {}
+  fields.forEach((k: string) => {
+    if (schema.properties[k]) {
+      properties[k] = schema.properties[k]
+    }
+  })
+  return {
+    ...schema,
+    properties
+  }
+}
