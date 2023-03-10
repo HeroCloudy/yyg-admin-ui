@@ -1,31 +1,33 @@
 /* eslint-disable no-unused-vars */
-export enum PropItemTypes {
+export enum SchemaType {
   STRING = 'string',
   NUMBER = 'number',
   ARRAY = 'array',
   BOOLEAN = 'boolean'
 }
-export interface OfItem {
-  const: string;
+export interface OfItem<T> {
   title: string;
+  const: T;// string | number | boolean;
 }
-export interface PropItem {
-  type: PropItemTypes | string;
-  title?: string;
-  oneOf?: OfItem[];
-  anyOf?: OfItem[];
+export type SchemaFormat = 'date' | 'time'| 'date-time'| 'email' | string;
 
-  maxLength?: number;
-  precision?: string;
-  scale?: string;
-  format?: string;
-
-  updatable?: boolean;
+export interface SchemaProp {
+  title: string;
+  type: SchemaType | string;
+  prop?: string;
+  format?: SchemaFormat;
+  oneOf?: OfItem<string | number | boolean>[];
+  anyOf?: OfItem<SchemaType | string>[];
+  default?: SchemaType | string;
+  required?: boolean;
 }
+
 export interface Schema {
-    required?: string[];
-    properties: { [key: string]: PropItem }
+  type: SchemaType | string;
+  properties: Record<string, SchemaProp>;
+  required?: string[];
 }
+
 export const UI_HIDDEN = 'ui:hidden'
 export const UI_DISABLED = 'ui:disabled'
 export const UI_WIDTH = 'ui:width'
@@ -46,7 +48,7 @@ export type UiSchemaItem = {
   [UI_HIDDEN]?: boolean;
   [UI_DISABLED]?: boolean;
   [UI_WIDTH]?: number;
-  [UI_OPTIONS]?: { [key: string]: string | number | boolean | undefined };
+  [UI_OPTIONS]?: Record<string, any>;
   [UI_WIDGET]?: UiWidgets | string;
   [UI_COLUMN]?: number;
 }

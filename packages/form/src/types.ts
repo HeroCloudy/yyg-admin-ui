@@ -19,6 +19,11 @@ export const formProps = {
     type: Number,
     required: false,
     default: 3
+  },
+  rules: {
+    type: Object,
+    required: false,
+    default: () => ({})
   }
 } as const
 
