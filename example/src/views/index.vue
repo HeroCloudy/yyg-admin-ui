@@ -7,13 +7,18 @@
  * 2022/11/17 13:46   dscloudy    Create File.
  -->
 <template>
-  <yyg-layout type="tlr" left-width="280px">
+  <yyg-layout type="ltb" left-width="280px">
     <template #top>
       <div>
         <yyg-toggle-full-screen></yyg-toggle-full-screen>
         <yyg-toggle-side-bar></yyg-toggle-side-bar>
         <yyg-user-dropdown :avatar="userInfo.avatar" :dropdown-items="dropdownItems"></yyg-user-dropdown>
       </div>
+    </template>
+    <template #left>
+      <yyg-side-bar logo="http://www.yygnb.com/logo.png"
+                    app-name="权限管理系统"
+      ></yyg-side-bar>
     </template>
   </yyg-layout>
 </template>

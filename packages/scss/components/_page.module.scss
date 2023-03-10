@@ -1,0 +1,30 @@
+@import "../tools";
+@import "../acss/mp";
+@import "../base/var.module";
+
+@include b('yyg-page') {
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  @include e('container') {
+    flex: 1;
+    overflow: hidden;
+
+    .el-scrollbar__wrap {
+      padding: $common-padding;
+
+      .HaPage__wrapper {
+        display: flex;
+      }
+    }
+  }
+
+  @include e('opt') {
+    background-color: rgb(#eeeeee, 0.3);
+    padding: 10px $common-padding;
+    text-align: center;
+  }
+}

@@ -1,4 +1,4 @@
-import { ExtractPropTypes, Ref } from 'vue'
+import { ExtractPropTypes, InjectionKey, Ref } from 'vue'
 
 export const LayoutType: { [k: string]: string } = {
   LR: 'lr', // 左 - 右
@@ -14,7 +14,7 @@ export interface LayoutValues {
   isExpandRef: Ref<boolean>;
 }
 
-// export const LayoutValuesKey = Symbol('Layout_Values_Key') as InjectionKey<LayoutValues>
+export const LayoutValuesKey = Symbol('Layout_Values_Key') as InjectionKey<LayoutValues>
 
 export const defaultLeftWidth = '200px'
 export const defaultLeftWidthMini = '50px'

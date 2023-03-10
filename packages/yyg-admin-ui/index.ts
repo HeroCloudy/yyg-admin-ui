@@ -8,6 +8,8 @@ import ToggleSideBar from '@yyg-admin-ui/toggle-side-bar'
 import UserDropdown from '@yyg-admin-ui/user-dropdown'
 import Card from '@yyg-admin-ui/card'
 import Form from '@yyg-admin-ui/form'
+import SideBar from '@yyg-admin-ui/side-bar'
+import Page from '@yyg-admin-ui/page'
 // import component end
 import '../scss/index.scss'
 import { installIcons } from './src/install-icons'
@@ -23,7 +25,9 @@ const components = [
   ToggleSideBar,
   UserDropdown,
   Card,
-  Form
+  Form,
+  SideBar,
+  Page
 ] // components
 
 // 全局动态添加组件

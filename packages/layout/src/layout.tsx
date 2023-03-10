@@ -1,5 +1,6 @@
-import { computed, defineComponent, ref } from 'vue'
+import { computed, defineComponent, onMounted, onUnmounted, ref } from 'vue'
 import { layoutProps, LayoutType } from './types'
+import { COMMON_EVENTS, emitter } from '@yyg-admin-ui/utils'
 
 const NAME = 'yyg-layout'
 
@@ -15,6 +16,18 @@ export default defineComponent({
     const innerIsExpand = computed(() => isExpandByChild.value)
     const innerLeftWidth = computed(() => innerIsExpand.value ? props.leftWidth : props.leftWidthMini)
     const innerTopHeight = computed(() => props.topHeight)
+
+    const expandCallBack = (isExpand: boolean) => {
+      isExpandByChild.value = isExpand
+    }
+
+    onMounted(() => {
+      emitter.on(COMMON_EVENTS.EVENT_EXPAND_SIDE_BAR, expandCallBack)
+    })
+
+    onUnmounted(() => {
+      emitter.off(COMMON_EVENTS.EVENT_EXPAND_SIDE_BAR, expandCallBack)
+    })
 
     const buildMain = () => {
       return (

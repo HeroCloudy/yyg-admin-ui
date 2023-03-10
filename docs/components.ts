@@ -7,5 +7,7 @@ export const components = [
   { text: 'ToggleSideBar 切换左边栏', link: '/components/toggle-side-bar' },
   { text: 'UserDropdown 头像下拉', link: '/components/user-dropdown' },
   { text: 'Card 高级卡片', link: '/components/card' },
-  { text: 'Form JSON Schema表单', link: '/components/form' }
+  { text: 'Form JSON Schema表单', link: '/components/form' },
+  { text: 'SideBar 左侧边栏', link: '/components/side-bar' },
+  { text: 'Page 页面', link: '/components/page' }
 ] // end
